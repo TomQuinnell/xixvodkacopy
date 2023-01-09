@@ -35,8 +35,6 @@ export class HomePageComponent implements OnInit {
     this.range(Math.min(this.yPrev, y), Math.max(this.yPrev, y), 5).forEach((i: number) => {
       const label = Math.min(Math.floor(i/20) + 1, 290);
       const imageURL = HomePageComponent.URL + HomePageComponent.addLeadingZeros(label) + '.webp';
-      console.log(i);
-      console.log(imageURL);
       this.setBGContent(imageURL);
     })
     this.yPrev = y;

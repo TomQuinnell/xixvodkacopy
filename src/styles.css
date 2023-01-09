@@ -3,4 +3,20 @@
 html {background-color: black}
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: "FormularBold", "Helvetica Neue", sans-serif; color: #FFF}
+body { background-color: #000}
+p {font-size: 24pt; line-height:24pt}
+h1 {
+  font-family: "FormularBold" !important;
+  font-size: 48pt !important;
+  font-weight: bolder !important;
+  line-height: 48pt !important;
+}
+h3 {
+  font-family: "FormularBold" !important;
+  font-size: 24pt !important;
+  line-height: 24pt !important;
+}
+.mat-toolbar {
+  background-color: black !important;
+}

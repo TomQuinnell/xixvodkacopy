@@ -1,9 +1,7 @@
 <mat-toolbar color="primary">
-  <span>
-    <img src="assets/xixlogo.png" alt="logo">
-  </span>
-  <span class="fill-remaining-space"></span>
-  <button mat-button (click)="navigateHome()">Home</button>
-  <button mat-button (click)="navigateBuy()">Buy</button>
-  <button mat-button (click)="navigateTCs()">T&Cs</button>
+  <img class="logo" src="assets/xixlogo.png" alt="logo" (click)="navigateHome()">
+  <span class="flex-expand"></span>
+  <button mat-button class="animated-button" (click)="navigateHome()"><h3>Home</h3></button>
+  <button mat-button class="animated-button" (click)="navigateBuy()"><h3>Buy</h3></button>
+  <button mat-button class="animated-button" (click)="navigateTCs()"><h3>T&Cs</h3></button>
 </mat-toolbar>

@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   }
 
   navigateHome(): void {
-    this.navigate("home");
+    this.navigate("");
   }
 
   navigateBuy(): void {

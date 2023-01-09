@@ -1,0 +1,29 @@
+.animated-button {
+  --border-color: #FFF;
+  --border-width: 2px;
+  --bottom-distance: 0px;
+  --duration: 0.3s;
+
+  color: #FFF;
+  display: inline;
+  background-image: linear-gradient(var(--border-color), var(--border-color));
+  background-size: 0 var(--border-width);
+  background-repeat: no-repeat;
+  transition: var(--duration);
+  background-position: 50% calc(100% - var(--bottom-distance));
+  padding-top: 5px;
+}
+
+.animated-button:hover {
+  background-size: 100% var(--border-width);
+  padding-top: 0px;
+  transition-duration: var(--duration);
+}
+
+.flex-expand {
+  flex: 1 1 auto;
+}
+
+.logo {
+  cursor: pointer;
+}
