@@ -33,7 +33,7 @@ export class HomePageComponent implements OnInit {
     const y = window.scrollY;
     // Change the background image
     this.range(Math.min(this.yPrev, y), Math.max(this.yPrev, y), 5).forEach((i: number) => {
-      const label = Math.min(Math.floor(i/20) + 1, 290);
+      const label = Math.max(Math.min(Math.floor(i/24) + 1, 290) - 15, 0);
       const imageURL = HomePageComponent.URL + HomePageComponent.addLeadingZeros(label) + '.webp';
       this.setBGContent(imageURL);
     })

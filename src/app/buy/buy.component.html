@@ -1,0 +1,12 @@
+<div class="content-container">
+  <div class="padded-content">
+    <button mat-mini-fab class="round-button" (click)="dec()"><mat-icon>exposure_minus_1</mat-icon></button>
+    <span></span>
+    <h6 class="text-box" style="padding-top: 10px">{{numSelected}}</h6>
+    <span></span>
+    <button mat-mini-fab class="round-button" (click)="inc()"><mat-icon>exposure_plus_1</mat-icon></button>
+    <span></span>
+    <h6 class="text-box">70cl - Original <br>x{{numSelected}} - £{{numSelected * 35}}</h6>
+  </div>
+  <button mat-button class="select-button">BUY NOW</button>
+</div>

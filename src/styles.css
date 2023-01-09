@@ -17,6 +17,10 @@ h3 {
   font-size: 24pt !important;
   line-height: 24pt !important;
 }
+h6 {
+  font-size: 16pt !important;
+  line-height: 16pt !important;
+}
 .mat-toolbar {
   background-color: black !important;
 }

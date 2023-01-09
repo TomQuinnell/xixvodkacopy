@@ -1,0 +1,12 @@
+.content-container {
+  margin-top: 10%;
+  display: grid;
+  grid-auto-flow: column;
+}
+.product-content {
+  margin-left: 10%;
+  margin-right: 30%;
+}
+.product-template {
+  max-width: 100%;
+}

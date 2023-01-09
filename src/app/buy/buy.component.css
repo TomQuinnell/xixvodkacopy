@@ -1,0 +1,25 @@
+.round-button {
+  background-color: #222222;
+}
+.select-button {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+.content-container {
+  width: fit-content;
+  display: flex;
+  border-radius: 5px;
+  border: 2px solid #FFFFFF;
+  padding-left: 15px;
+}
+.text-box {
+  padding-left: 5px;
+  padding-right: 5px;
+  top: 50%;
+  text-align: right;
+}
+.padded-content {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
