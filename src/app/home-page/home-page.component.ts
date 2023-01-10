@@ -18,14 +18,24 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit(): void {
     this.yPrev = 0;
+    this.preLoadContent();
     this.updateBGContent();
+  }
+
+  preLoadContent() {
+    this.range(10, 290, 5).forEach((i: number) => {
+      const imageURL = HomePageComponent.URL + HomePageComponent.addLeadingZeros(i) + '.webp';
+
+      const img = new Image();
+      img.src = imageURL;
+    });
   }
 
   range(start: number, end: number, step: number): number[] {
     return Array.from(Array(Math.round((end - start + 1) / 5)).keys()).map(x => x * step + start);
   }
 
-  @HostListener("window:scroll", [])
+  @HostListener("window:scroll", ['$event'])
   private updateBGContent() {
     if (!this.animate) {
       return;
@@ -37,11 +47,19 @@ export class HomePageComponent implements OnInit {
       const imageURL = HomePageComponent.URL + HomePageComponent.addLeadingZeros(label) + '.webp';
       this.setBGContent(imageURL);
     })
-    this.yPrev = y;
+    const label = Math.max(Math.min(Math.floor(y/24) + 1, 290) - 15, 0);
+    const imageURL = HomePageComponent.URL + HomePageComponent.addLeadingZeros(label) + '.webp';
+
+    this.setBGContent(imageURL);
+    /*const img = new Image();
+    img.onload = () => this.setBGContent(imageURL);
+    img.src = imageURL;
+    this.yPrev = y;*/
   }
 
   private setBGContent(url: string) {
     this.webURL = url;
+    console.log(url);
   }
 
   private static addLeadingZeros(num: number, totalLength: number=4): string {

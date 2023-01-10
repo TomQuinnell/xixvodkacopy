@@ -3,29 +3,29 @@
 html {background-color: black}
 
 html, body { height: 100%; }
-body { margin: 0; font-family: "FormularBold", "Helvetica Neue", sans-serif; color: #FFF}
+body { margin: 0; font-family: "Montserrat", "Helvetica Neue", sans-serif; color: #FFF}
 body { background-color: #000}
 p {font-size: 24pt; line-height:24pt}
 h1 {
-  font-family: "FormularBold" !important;
+  font-family: "Montserrat" !important;
   font-size: 48pt !important;
   font-weight: bolder !important;
   line-height: 48pt !important;
 }
 h2 {
-  font-family: "FormularBold" !important;
+  font-family: "Montserrat" !important;
   font-size: 28pt !important;
   font-weight: bolder !important;
   line-height: 28pt !important;
   color: white;
 }
 h3 {
-  font-family: "FormularBold" !important;
+  font-family: "Montserrat" !important;
   font-size: 24pt !important;
   line-height: 24pt !important;
 }
 h4 {
-  font-family: "FormularBold" !important;
+  font-family: "Montserrat" !important;
   font-size:  16pt !important;
   line-height: 16pt !important;
   color: white;
@@ -47,4 +47,5 @@ mat-dialog-container {
   top: 50% !important;
   justify-content: center !important;
   align-items: center !important;
+  border-radius: 10px !important;
 }

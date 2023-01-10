@@ -6,11 +6,14 @@
   color: white;
   align-content: center;
   text-align: center;
-  margin-right: 25px;
   border: 2px solid white;
-  width: fit-content;
+  width: 30%;
   height: 50px;
   border-radius:10px;
+}
+.form-input-middle {
+  margin-left: 5%;
+  margin-right: 5%;
 }
 .form-selector {
   background-color: black;

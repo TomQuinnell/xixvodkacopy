@@ -7,7 +7,7 @@
       <h2>Please enter your birthday:</h2>
       <input class="form-input" id="day" type="text" formControlName="day" placeholder="DD" (keypress)="keyPressDate($event)"
              ng-class="{'has-error': dobForm.$submitted && (dobForm.day.$invalid && !dobForm.day.$pristine)}">
-      <input class="form-input" id="month" type="text" formControlName="month" placeholder="MM" (keypress)="keyPressDate($event)">
+      <input class="form-input form-input-middle" id="month" type="text" formControlName="month" placeholder="MM" (keypress)="keyPressDate($event)">
       <input class="form-input" id="year" type="text" formControlName="year" placeholder="YYYY" (keypress)="keyPressDate($event)">
     </form>
   </div>
