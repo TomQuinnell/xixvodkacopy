@@ -14,10 +14,10 @@ export class DobPageModalComponent implements OnInit {
   selectedCountry: String;
   countries: String[];
   drinkingAgeMap: Map<String, number>;
+  public hasError: boolean;
 
   constructor(private dialogRef: MatDialogRef<DobPageModalComponent>,
-              private fb: FormBuilder,
-              private router: Router){
+              private fb: FormBuilder){
     this.dialogRef.updateSize('30%', '80%');
     this.dialogRef.disableClose = true;
 
@@ -34,6 +34,7 @@ export class DobPageModalComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.hasError = false;
   }
 
   keyPressDate(event: any) {
@@ -65,6 +66,8 @@ export class DobPageModalComponent implements OnInit {
         this.dialogRef.disableClose = false;
         this.dialogRef.close();
       }
+    } else {
+      this.hasError = true;
     }
   }
 

@@ -5,23 +5,26 @@
   <div class="dob">
     <form ngNativeValidate [formGroup]="dobForm">
       <h2>Please enter your birthday:</h2>
-      <input id="day" type="text" formControlName="day" placeholder="DD" (keypress)="keyPressDate($event)"
+      <input class="form-input" id="day" type="text" formControlName="day" placeholder="DD" (keypress)="keyPressDate($event)"
              ng-class="{'has-error': dobForm.$submitted && (dobForm.day.$invalid && !dobForm.day.$pristine)}">
-      <input id="month" type="text" formControlName="month" placeholder="MM" (keypress)="keyPressDate($event)">
-      <input id="year" type="text" formControlName="year" placeholder="YYYY" (keypress)="keyPressDate($event)">
+      <input class="form-input" id="month" type="text" formControlName="month" placeholder="MM" (keypress)="keyPressDate($event)">
+      <input class="form-input" id="year" type="text" formControlName="year" placeholder="YYYY" (keypress)="keyPressDate($event)">
     </form>
   </div>
   <div class="disclaimer">
     <h4>
       You must be of legal drinking age in your respective country for entry.
-      By entering you accept our <a> routerLink="/policies/tcs.html" terms and conditions</a>, our <a> routerLink="/policies/tcs.html">privacy policy and cookie policy</a>. We encourage drinking responsibly.
+      By entering you accept our <a href="/tcs"> terms and conditions</a>. We encourage drinking responsibly.
     </h4>
   </div>
-  <div class="selectCountry">
-    <ng-select [items]="countries" [(ngModel)]="selectedCountry"></ng-select>
+  <div class="select-country">
+    <ng-select class="form-select form-selector" [items]="countries" [(ngModel)]="selectedCountry"></ng-select>
   </div>
   <div class="submit">
-    <button (click)="onSubmit()">Enter</button>
+    <button class="submit-button" (click)="onSubmit()"><h6>ENTER</h6></button>
+  </div>
+  <div class="error-msg" *ngIf="hasError">
+    <h4>Please enter a valid dob</h4>
   </div>
 
 </div>
